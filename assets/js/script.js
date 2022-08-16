@@ -9,3 +9,5 @@ function initPage() {
     const windEl = document.getElementById("wind-speed");
     const uvEl = document.getElementById("UV-index");
     const historyEl = document.getElementById("history");
+    let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+    console.log(searchHistory);
