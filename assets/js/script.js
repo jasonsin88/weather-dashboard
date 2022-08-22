@@ -22,11 +22,11 @@ function initPage() {
         let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
         fetch(queryURL)
         .then(function(response) {
-            todayweatherEl.classList.remove("d-none");
             console.log(response);
+            todayweatherEl.classList.remove("d-none");
 
             // Display current weather
-            const currentDate = new Date(response.data.dt * 1000);
+            const currentDate = new Date(response.data.dt);
             console.log(currentDate);
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
