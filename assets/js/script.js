@@ -26,7 +26,7 @@ function initPage() {
             todayweatherEl.classList.remove("d-none");
 
             // Display current weather
-            const currentDate = new Date(response.data.dt);
+            const currentDate = new Date(response.data.dt * 1000);
             console.log(currentDate);
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
