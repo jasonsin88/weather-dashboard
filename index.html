@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm text-light font-weight-bold" style="background-color: #7FB3D5;">
-        <span class="navbar-brand" href="#">Weather Dashboard</span>
-    </nav>
-    <br />
-    <div class="container">
+    <header class="container-fluid text-center text-light font-weight-bold p-2" style="background-color: #7FB3D5">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-4 bg-light">
-                <p class="search-header my-1">Search for a city</p>
+            <div class="col-3 bg-light">
+                <h5 class="my-1">Search for a city</h5>
                 <div class="input-group mb-3">
                     <input id="city-input" type="text" class="form-control" placeholder="Enter city name">
                     <div class="input-group-append">
@@ -32,38 +32,21 @@
                 <button class="btn btn-primary mb-3 border-secondary" style="background-color: #7FB3D5;" type="button" id="clear-history"><i class="fa-solid fa-trash-can"></i> Clear history</button>
                 <form id="history"></form>
             </div>
-            <div class="col-8">
+
+            <div class="col-lg-9">
                 <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3 rounded">
-                        <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src="placeholder" alt="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="temperature"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="humidity"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p id="wind-speed"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex">
-                                <p id="UV-index"></p>
-                            </div>
+                    <div class="col-lg-11 card border-dark m-3 d-none" id="today-weather">
+                        <div class="card-body">
+                            <h3 id="city-name" class="city-name align-middle"></h3>
+                            <img id="current-pic" alt="">
+                            <p id="temperature"></p>                    
+                            <p id="humidity"></p>                          
+                            <p id="wind-speed"></p>                      
+                            <p id="UV-index"></p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row d-none" id="fiveday-header">
                     <div class="col-12">
                         <h3>5-Day Forecast</h3>
                     </div>
